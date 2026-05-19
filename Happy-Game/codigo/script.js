@@ -84,6 +84,9 @@ function iniciarNovoQuiz() {
 
   perguntaAtual = 0;
   pontuacao = 0;
+  document.getElementById(
+  "btnComecar"
+  ).style.display = "none";
 
   atualizarPontuacao();
   atualizarBarra();
