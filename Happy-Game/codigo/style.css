@@ -1,168 +1,144 @@
-/* --------------------------
-   HAPPY GAME - FASE 3
---------------------------- */
-
 body {
-  background: linear-gradient(135deg, #0f172a, #1e293b);
-  min-height: 100vh;
-  font-family: Arial, Helvetica, sans-serif;
-  color: white;
-}
 
-/* NAVBAR */
+  background:
+    linear-gradient(
+      135deg,
+      #091428,
+      #0f3460
+    );
+
+  color: white;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+}
 
 .navbar {
-  background: rgba(15, 23, 42, 0.9) !important;
+
+  background: rgba(0,0,0,0.4);
+
   backdrop-filter: blur(10px);
-  box-shadow: 0px 4px 20px rgba(0,0,0,0.5);
-}
 
-.navbar-brand {
-  font-weight: bold;
-  font-size: 25px;
-  color: #38bdf8 !important;
 }
-
-.nav-link {
-  color: white !important;
-  transition: 0.3s;
-}
-
-.nav-link:hover {
-  color: #38bdf8 !important;
-}
-
-/* HOME */
 
 #home {
-  padding-top: 100px;
-  padding-bottom: 100px;
+
+  padding: 100px 20px;
+
+  text-align: center;
+
 }
 
 #home h1 {
+
   font-size: 60px;
+
   font-weight: bold;
+
 }
 
-#home p {
-  font-size: 22px;
-  color: #cbd5e1;
+.quiz-select {
+
+  max-width: 400px;
+
+  margin: auto;
+
 }
 
-#mensagem {
-  color: #38bdf8;
-  font-size: 20px;
-}
+.ia-box {
 
-/* CARDS */
-
-.card {
   background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.1);
-  backdrop-filter: blur(12px);
+
   border-radius: 20px;
-  transition: 0.3s;
-  color: white;
+
+  padding: 30px;
+
+  max-width: 700px;
+
+  margin: auto;
+
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 0px 20px rgba(56,189,248,0.5);
+#quiz,
+#contato {
+
+  padding: 80px 20px;
+
 }
 
-/* BOTÕES */
+.quiz-card {
 
-.btn-primary {
-  background: #38bdf8;
-  border: none;
-  font-weight: bold;
+  background: rgba(255,255,255,0.1);
+
+  border-radius: 25px;
+
+  padding: 40px;
+
+  backdrop-filter: blur(10px);
+
+  box-shadow:
+    0px 0px 30px rgba(0,0,0,0.3);
+
 }
-
-.btn-primary:hover {
-  background: #0ea5e9;
-}
-
-.btn-success {
-  background: #22c55e;
-  border: none;
-  font-weight: bold;
-}
-
-/* QUIZ */
-
-#quiz h2 {
-  color: white;
-}
-
-/* PROGRESSO */
-
-.progress {
-  height: 20px;
-  border-radius: 20px;
-}
-
-.progress-bar {
-  background: #38bdf8;
-}
-
-/* FORMULÁRIO */
-
-.form-control {
-  border-radius: 10px;
-}
-
-/* FOOTER */
-
-footer {
-  margin-top: 80px;
-  background: rgba(0,0,0,0.4);
-}
-
-/* RESPOSTAS QUIZ */
 
 .resposta-btn {
 
-  background: rgba(255,255,255,0.05);
-  border: 2px solid rgba(255,255,255,0.1);
-  color: white;
+  width: 100%;
 
-  padding: 18px;
+  margin-bottom: 15px;
 
-  border-radius: 15px;
+  padding: 15px;
+
+  border: none;
+
+  border-radius: 12px;
 
   transition: 0.3s;
 
-  font-size: 18px;
-  font-weight: bold;
-
-  text-align: left;
 }
 
 .resposta-btn:hover {
 
   transform: scale(1.02);
 
-  border-color: #38bdf8;
-
-  background: rgba(56,189,248,0.15);
 }
-
-/* ACERTO */
 
 .correta {
 
   background: #22c55e !important;
-  border-color: #22c55e !important;
 
   color: white;
-}
 
-/* ERRO */
+}
 
 .errada {
 
   background: #ef4444 !important;
-  border-color: #ef4444 !important;
 
   color: white;
+
+}
+
+.progress {
+
+  height: 20px;
+
+  border-radius: 20px;
+
+}
+
+.progress-bar {
+
+  background: #38bdf8;
+
+}
+
+footer {
+
+  text-align: center;
+
+  padding: 20px;
+
+  background: rgba(0,0,0,0.5);
+
 }

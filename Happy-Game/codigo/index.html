@@ -8,14 +8,10 @@
 
   <title>Happy Game</title>
 
-  <!-- BOOTSTRAP -->
-
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
     rel="stylesheet"
   >
-
-  <!-- CSS -->
 
   <link rel="stylesheet" href="style.css">
 
@@ -33,40 +29,21 @@
         Happy Game
       </a>
 
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#menu"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <ul class="navbar-nav ms-auto flex-row gap-3">
 
-      <div class="collapse navbar-collapse" id="menu">
+        <li class="nav-item">
+          <a class="nav-link" href="#quiz">
+            Quiz
+          </a>
+        </li>
 
-        <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#contato">
+            Contato
+          </a>
+        </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="#home">
-              Home
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#quiz">
-              Quiz
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#contato">
-              Contato
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
+      </ul>
 
     </div>
 
@@ -74,47 +51,81 @@
 
   <!-- HOME -->
 
-  <section id="home" class="text-center">
+  <section id="home">
 
-    <div class="container">
+    <div class="container text-center">
 
-      <h1 class="display-3 fw-bold">
+      <h1>
         Bem-vindo ao Happy Game
       </h1>
 
       <p class="mt-4">
-        Aprenda programação e lógica de forma divertida,
-        interativa e inteligente.
+
+        Plataforma educacional interativa
+        com quizzes inteligentes e adaptativos.
+
       </p>
 
-      
+      <!-- IA -->
 
-      <p id="mensagem" class="mt-4 fw-bold"></p>
+      <div class="ia-box mt-5">
 
-    </div>
-
-  </section>
-
-   <section id="ia" class="p-5">
-
-    <div class="container">
-
-      <div class="card shadow-lg p-5 text-center">
-
-        <h2 class="mb-4">
+        <h3>
           Inteligência Artificial Educacional
-        </h2>
+        </h3>
 
-        <p>
-          O Happy Game utiliza conceitos de Inteligência Artificial
-          para adaptar a dificuldade das perguntas conforme o
-          desempenho do usuário.
+        <p class="mt-3">
+
+          O sistema adapta a dificuldade das perguntas
+          conforme o desempenho do jogador.
+
         </p>
 
-        <p>
-          Dessa forma, a plataforma oferece uma experiência mais
-          personalizada, auxiliando no aprendizado de forma dinâmica.
-        </p>
+      </div>
+
+      <!-- ESCOLHER QUIZ -->
+
+      <div class="quiz-select mt-5">
+
+        <select
+          id="temaQuiz"
+          class="form-select form-select-lg"
+        >
+
+          <option value="programacao">
+            Quiz de Tecnologia
+          </option>
+
+          <option value="futebol">
+            Quiz de Futebol
+          </option>
+
+          <option value="matematica">
+            Quiz de Matemática
+          </option>
+
+        </select>
+
+      </div>
+
+      <!-- BOTÃO -->
+
+      <button
+        class="btn btn-primary btn-lg mt-4"
+        onclick="iniciarNovoQuiz()"
+      >
+
+        Começar Jogo
+
+      </button>
+
+      <!-- PROGRESSO -->
+
+      <div class="mt-4">
+
+        <h5 id="progressoSalvo">
+          Melhor Pontuação: 0
+        </h5>
 
       </div>
 
@@ -122,39 +133,19 @@
 
   </section>
 
-  <div class="text-center mt-5 mb-4">
-
-  <button
-    class="btn btn-primary btn-lg px-5"
-    id="btnJogar"
-    onclick="iniciarNovoQuiz()"
-  >
-
-    Começar Jogo
-
-  </button>
-
-</div>
-
   <!-- QUIZ -->
 
-  <section id="quiz" class="p-5">
+  <section id="quiz">
 
     <div class="container">
 
-      <h2 class="text-center mb-5">
-        Quiz Educativo
-      </h2>
+      <div class="quiz-card">
 
-      <div class="card shadow-lg p-4">
+        <h3 id="pergunta">
+          Escolha um quiz para começar
+        </h3>
 
-        <h4 id="pergunta">
-          Pergunta aparecerá aqui
-        </h4>
-
-        <div id="respostas" class="mt-4 d-grid gap-3"></div>
-
-        
+        <div id="respostas" class="mt-4"></div>
 
         <div class="mt-4">
 
@@ -166,7 +157,7 @@
 
         <!-- BARRA -->
 
-        <div class="progress mt-3">
+        <div class="progress mt-4">
 
           <div
             id="barraProgresso"
@@ -182,19 +173,15 @@
 
   </section>
 
-  <!-- IA -->
-
- 
-
   <!-- CONTATO -->
 
-  <section id="contato" class="p-5">
+  <section id="contato">
 
     <div class="container">
 
-      <div class="card shadow-lg p-4">
+      <div class="quiz-card">
 
-        <h2 class="text-center mb-4">
+        <h2 class="text-center">
           Contato
         </h2>
 
@@ -210,7 +197,6 @@
               type="text"
               id="nome"
               class="form-control"
-              placeholder="Digite seu nome"
             >
 
           </div>
@@ -225,7 +211,6 @@
               type="email"
               id="email"
               class="form-control"
-              placeholder="Digite seu email"
             >
 
           </div>
@@ -246,19 +231,13 @@
 
   <!-- FOOTER -->
 
-  <footer class="text-white text-center p-4">
+  <footer>
 
-    <p class="m-0">
-      Happy Game © 2026 - Plataforma Educacional Interativa
+    <p>
+      Happy Game © 2026
     </p>
 
   </footer>
-
-  <!-- BOOTSTRAP -->
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- JAVASCRIPT -->
 
   <script src="script.js"></script>
 
